@@ -14,20 +14,20 @@ html, body {
 
 body {
     background: url('../pacote-d013/imagens/fundo-madeira.jpg')no-repeat top center;
-    background-size: cover;
-    background-attachment: fixed;
+    background-size: cover; /*Imagem irá ocupar a tela inteira, mesmo se precisar cortar e remendr a imagem*/
+    background-attachment: fixed; /*Imagem fixa, mesmo com barra de rolagem, efeito fixed*/
 }
 
 main {
-    position: relative;
+    position: relative; 
     height: 100vh;
 }
 
 section#telefone {
-    position: absolute;
+    position: absolute /*Retirado do contexto normal do documento, agora ele fica facíl para manipular, ele precisa de um pai (relative), assim ele sai de estatico para algo manipulavel fora do fluxo do documento*/;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /*Faz a caixa ficar no meio, sem ele a ponta esquerda do topo fica no cento, mas não é isso que a gente quer*/
 
     height: 627px;
     width: 311px;
